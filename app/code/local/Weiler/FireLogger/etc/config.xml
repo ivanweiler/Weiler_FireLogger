@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Weiler_FireLogger>
+             <version>0.2.0</version>
+        </Weiler_FireLogger>
+    </modules>
+
+    <global>
+        <models>
+            <firelogger>
+                <class>Weiler_FireLogger_Model</class>
+            </firelogger>>
+        </models>      
+        <helpers>
+            <firelogger>
+                <class>Weiler_FireLogger_Helper</class>
+            </firelogger>
+        </helpers>
+    </global>
+
+	<frontend>
+		<routers>
+            <firelogger>
+                <use>standard</use>
+                <args>
+                    <module>Weiler_FireLogger</module>
+                    <frontName>firelogger</frontName>
+                </args>
+            </firelogger>
+        </routers>
+	</frontend>
+	
+    <default>
+        <dev>
+            <debug>
+                <firelogger>0</firelogger>
+			</debug>
+		</dev>
+    </default>	
+
+</config>
